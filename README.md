@@ -111,7 +111,7 @@ npm run dev
 ```
 ### En una nueva terminal:
 
-###Bash
+### Bash
 ```
 cd sistema-tickets-frontend
 npm install

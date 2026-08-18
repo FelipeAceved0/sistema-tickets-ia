@@ -55,16 +55,16 @@ Un sistema Full-Stack para la gestión de incidencias de soporte técnico en tie
 ```
 
 
-🚀 Guía de Instalación y Configuración Local
-Prerrequisitos
-Node.js (v18 o superior)
+## 🚀 Guía de Instalación y Configuración Local
 
-MySQL / XAMPP (servidor Apache y MySQL corriendo)
+### Prerrequisitos
+* Node.js (v18 o superior)
+* MySQL / XAMPP (servidor Apache y MySQL corriendo)
 
-1. Configuración de la Base de Datos
+### 1. Configuración de la Base de Datos
 Ejecuta el script de creación de tablas en phpMyAdmin o MySQL Workbench:
 
-SQL
+```sql
 CREATE DATABASE IF NOT EXISTS tickets_db;
 USE tickets_db;
 
@@ -82,31 +82,42 @@ CREATE TABLE IF NOT EXISTS tickets (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-2. Configurar y Levantar el Backend
-Bash
+```
+
+## 2. Configurar y Levantar el Backend
+### Bash
+```
 cd sistema-tickets-backend
 npm install
-Crea un archivo .env en sistema-tickets-backend/:
+```
 
-Fragmento de código
+### Crea un archivo .env en sistema-tickets-backend/:
+
+### Fragmento de código
+```
 PORT=5000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=
 DB_NAME=tickets_db
 GEMINI_API_KEY=tu_api_key_aqui
-Inicia el servidor:
+```
+## Inicia el servidor:
 
-Bash
+### Bash
+```
 npm run dev
 3. Configurar y Levantar el Frontend
-En una nueva terminal:
+```
+### En una nueva terminal:
 
-Bash
+###Bash
+```
 cd sistema-tickets-frontend
 npm install
 npm run dev
+```
 Abre tu navegador en http://localhost:5173.
 
-📝 Licencia
+## 📝 Licencia
 Este proyecto es de código abierto y está disponible bajo la licencia MIT.
